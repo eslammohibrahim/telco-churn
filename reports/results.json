@@ -1,0 +1,79 @@
+{
+  "models": {
+    "Logistic regression": {
+      "best_params": {
+        "model__C": 0.1
+      },
+      "cv_roc_auc": 0.8429,
+      "val": {
+        "roc_auc": 0.8579,
+        "pr_auc": 0.6724,
+        "brier": 0.131
+      }
+    },
+    "Random forest": {
+      "best_params": {
+        "model__max_depth": null,
+        "model__min_samples_leaf": 20
+      },
+      "cv_roc_auc": 0.8463,
+      "val": {
+        "roc_auc": 0.8563,
+        "pr_auc": 0.6682,
+        "brier": 0.1335
+      }
+    },
+    "Gradient boosting": {
+      "best_params": {
+        "model__learning_rate": 0.1,
+        "model__max_depth": 2,
+        "model__max_iter": 100
+      },
+      "cv_roc_auc": 0.8485,
+      "val": {
+        "roc_auc": 0.8598,
+        "pr_auc": 0.6802,
+        "brier": 0.1298
+      }
+    }
+  },
+  "test": {
+    "roc_auc": 0.8357,
+    "pr_auc": 0.6414,
+    "brier": 0.1397
+  },
+  "picked_model": "Gradient boosting",
+  "threshold": 0.29,
+  "strategies_test": {
+    "Nobody": {
+      "customers_targeted": 0,
+      "churners_reached": 0,
+      "profit": 0
+    },
+    "Everyone": {
+      "customers_targeted": 1409,
+      "churners_reached": 374,
+      "profit": 30941
+    },
+    "Probability >= 0.5": {
+      "customers_targeted": 288,
+      "churners_reached": 185,
+      "profit": 37356
+    },
+    "Probability >= 0.29 (tuned on validation)": {
+      "customers_targeted": 567,
+      "churners_reached": 293,
+      "profit": 51792
+    },
+    "Expected gain > offer cost": {
+      "customers_targeted": 636,
+      "churners_reached": 308,
+      "profit": 57496
+    }
+  },
+  "assumptions": {
+    "offer_cost": 50.0,
+    "accept_rate": 0.3,
+    "months_kept": 12
+  }
+}

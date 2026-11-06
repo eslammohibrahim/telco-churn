@@ -1,0 +1,39 @@
+{
+  "top_impact": {
+    "Contract": 0.571,
+    "tenure": 0.553,
+    "InternetService": 0.425,
+    "OnlineSecurity": 0.198,
+    "TechSupport": 0.161,
+    "PaymentMethod": 0.155,
+    "PaperlessBilling": 0.148,
+    "StreamingMovies": 0.129
+  },
+  "example_customer": {
+    "churn_probability": 0.812,
+    "actually_churned": 1,
+    "profile": {
+      "tenure": 3,
+      "MonthlyCharges": 100.95,
+      "Contract": "Month-to-month",
+      "InternetService": "Fiber optic",
+      "PaymentMethod": "Electronic check",
+      "TechSupport": "No",
+      "OnlineSecurity": "No"
+    },
+    "top_reasons": [
+      {
+        "feature": "tenure = 3",
+        "impact": 0.699
+      },
+      {
+        "feature": "InternetService = Fiber optic",
+        "impact": 0.423
+      },
+      {
+        "feature": "Contract = Month-to-month",
+        "impact": 0.407
+      }
+    ]
+  }
+}
